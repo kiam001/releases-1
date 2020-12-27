@@ -21,6 +21,7 @@ mkdir "${ROM_DIR}"
 fi
 cd "${ROM_DIR}"
 if [ -d "${ROM_DIR}/out" ]; then
+. build/envsetup.sh
 make clean -j$(nproc --all)
 make clobber -j$(nproc --all)
 fi
